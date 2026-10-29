@@ -1,0 +1,31 @@
+complaint_id,text,language,category,urgency,is_emergency,label_source,split
+pilot-001,"There is a pothole near the community hall; please repair it.",en,roads,low,false,synthetic,train
+pilot-002,"School ke gate ke paas road ka surface toot gaya hai.",hinglish,roads,medium,false,synthetic,train
+pilot-003,"The damaged lane is getting worse and buses are avoiding it.",en,roads,high,false,synthetic,train
+pilot-004,"An open road trench has no barrier and a child nearly fell in.",en,roads,critical,true,synthetic,train
+pilot-005,"Water pressure has been low in our building this week.",en,water,low,false,synthetic,train
+pilot-006,"Nal se paani leak ho raha hai near the market.",hinglish,water,medium,false,synthetic,train
+pilot-007,"Our block has had no water supply since yesterday morning.",en,water,high,false,synthetic,train
+pilot-008,"A main pipe burst and fast water is entering occupied homes.",en,water,critical,true,synthetic,train
+pilot-009,"Garbage was not collected from our lane today.",en,sanitation,low,false,synthetic,train
+pilot-010,"Kachra ke bins full hain outside the clinic.",hinglish,sanitation,medium,false,synthetic,train
+pilot-011,"Overflowing rubbish is blocking the footpath and attracting pests.",en,sanitation,high,false,synthetic,train
+pilot-012,"A truck spilled hazardous waste beside children waiting at school.",en,sanitation,critical,true,synthetic,train
+pilot-013,"The power was out for an hour in our apartment yesterday.",en,electricity,low,false,synthetic,train
+pilot-014,"Street transformer se sparks aa rahe hain sometimes.",hinglish,electricity,high,false,synthetic,train
+pilot-015,"A live cable has fallen to ankle height over the public footpath.",en,electricity,high,true,synthetic,train
+pilot-016,"A live wire is sparking on the public road beside pedestrians.",en,electricity,critical,true,synthetic,train
+pilot-017,"The drain near our home is blocked again.",en,drainage,low,false,synthetic,train
+pilot-018,"Nali ka paani market ke entrance tak aa raha hai.",hinglish,drainage,medium,false,synthetic,train
+pilot-019,"After rain the drain overflow is covering the whole street.",en,drainage,high,false,synthetic,train
+pilot-020,"Flood water is rising inside ground-floor homes with people trapped.",en,drainage,critical,true,synthetic,train
+pilot-021,"The lamp outside the library has been off for several days.",en,streetlights,low,false,synthetic,train
+pilot-022,"Park ke paas street light flicker karti hai every evening.",hinglish,streetlights,medium,false,synthetic,train
+pilot-023,"Three streetlights are out on the busy crossing.",en,streetlights,high,false,synthetic,train
+pilot-024,"A fallen streetlight pole is blocking traffic and its wire is sparking.",en,streetlights,critical,true,synthetic,train
+pilot-025,"Please repair the broken public bench near the library.",en,other,low,false,synthetic,train
+pilot-026,"Park ke swing ki chain toot gayi hai.",hinglish,other,medium,false,synthetic,train
+pilot-027,"The public toilet door does not lock and needs repair.",en,sanitation,medium,false,synthetic,train
+pilot-028,"A large tree branch has fallen across the public walkway.",en,other,high,false,synthetic,train
+pilot-029,"पार्क के पास की सड़क पर गड्ढा है।",hi,roads,medium,false,synthetic,train
+pilot-030,"नल से पानी नहीं आ रहा है।",hi,water,medium,false,synthetic,train

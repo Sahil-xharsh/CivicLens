@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+
+#Prs Guided Notes
+README-Data.md
+labels.md
