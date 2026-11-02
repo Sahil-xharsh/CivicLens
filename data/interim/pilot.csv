@@ -10,10 +10,10 @@ pilot-008,"A main pipe burst and fast water is entering occupied homes.",en,wate
 pilot-009,"Garbage was not collected from our lane today.",en,sanitation,low,false,synthetic,train
 pilot-010,"Kachra ke bins full hain outside the clinic.",hinglish,sanitation,medium,false,synthetic,train
 pilot-011,"Overflowing rubbish is blocking the footpath and attracting pests.",en,sanitation,high,false,synthetic,train
-pilot-012,"A truck spilled hazardous waste beside children waiting at school.",en,sanitation,critical,true,synthetic,train
+pilot-012,"A truck spilled hazardous waste beside children waiting at school.",en,other,critical,true,synthetic,train
 pilot-013,"The power was out for an hour in our apartment yesterday.",en,electricity,low,false,synthetic,train
 pilot-014,"Street transformer se sparks aa rahe hain sometimes.",hinglish,electricity,high,false,synthetic,train
-pilot-015,"A live cable has fallen to ankle height over the public footpath.",en,electricity,high,true,synthetic,train
+pilot-015,"A live cable has fallen to ankle height over the public footpath.",en,electricity,critical,true,synthetic,train
 pilot-016,"A live wire is sparking on the public road beside pedestrians.",en,electricity,critical,true,synthetic,train
 pilot-017,"The drain near our home is blocked again.",en,drainage,low,false,synthetic,train
 pilot-018,"Nali ka paani market ke entrance tak aa raha hai.",hinglish,drainage,medium,false,synthetic,train
