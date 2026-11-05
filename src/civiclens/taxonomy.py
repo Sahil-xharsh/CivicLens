@@ -26,3 +26,14 @@ CSV_FIELDS = (
     "split",
 )
 
+PROVENANCE_FIELDS = (
+    "complaint_id",
+    "source_type",
+    "source_name",
+    "source_reference",
+    "license",
+    "accessed_on",
+)
+
+SOURCE_TYPES = ("synthetic", "authored", "public")
+
