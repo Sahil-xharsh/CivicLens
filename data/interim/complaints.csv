@@ -12,7 +12,7 @@ pilot-010,Kachra ke bins full hain outside the clinic.,hinglish,sanitation,mediu
 pilot-011,Overflowing rubbish is blocking the footpath and attracting pests.,en,sanitation,high,false,synthetic,train
 pilot-012,A truck spilled hazardous waste beside children waiting at school.,en,other,critical,true,synthetic,train
 pilot-013,The power was out for an hour in our apartment yesterday.,en,electricity,low,false,synthetic,train
-pilot-014,Street transformer se sparks aa rahe hain sometimes.,hinglish,electricity,high,false,synthetic,train
+pilot-014,Street transformer se sparks aa rahe hain sometimes.,hinglish,electricity,high,true,synthetic,train
 pilot-015,A live cable has fallen to ankle height over the public footpath.,en,electricity,critical,true,synthetic,train
 pilot-016,A live wire is sparking on the public road beside pedestrians.,en,electricity,critical,true,synthetic,train
 pilot-017,The drain near our home is blocked again.,en,drainage,low,false,synthetic,train
@@ -29,23 +29,23 @@ pilot-027,The public toilet door does not lock and needs repair.,en,sanitation,m
 pilot-028,A large tree branch has fallen across the public walkway.,en,other,high,false,synthetic,train
 pilot-029,पार्क के पास की सड़क पर गड्ढा है।,hi,roads,medium,false,synthetic,train
 pilot-030,नल से पानी नहीं आ रहा है।,hi,water,medium,false,synthetic,train
-authored-001,The raised speed hump near the bus depot has broken into loose pieces.,en,roads,medium,false,synthetic,train
-authored-002,Station ke paas cycle lane par construction ka gravel faila hua hai.,hinglish,roads,high,false,synthetic,train
-authored-003,Runoff has washed away part of the road shoulder beside the culvert; one lane remains open.,en,roads,high,false,synthetic,train
-authored-004,Tap water has smelled metallic in our building on three mornings this week.,en,water,medium,false,synthetic,train
-authored-005,मोहल्ले में पानी का टैंकर इस हफ़्ते दो बार नहीं आया।,hi,water,medium,false,synthetic,dev
-authored-006,The public standpipe handle snapped and water is running continuously onto the pavement.,en,water,medium,false,synthetic,train
-authored-007,The neighborhood public toilet door sticks and requires repeated effort to open.,en,sanitation,medium,false,synthetic,train
-authored-008,"Market ke waste compactor kaam nahi kar raha, kachra abhi bins ke andar hai.",hinglish,sanitation,medium,false,synthetic,dev
-authored-009,Used medical needles are visible in an open waste bin beside the playground.,en,other,high,true,synthetic,train
-authored-010,The electrical feeder cabinet at the bus shelter is open with live terminals exposed at hand height.,en,electricity,critical,true,synthetic,train
-authored-011,"Voltage drop ke karan lift rukti hai, lekin staff passengers ko safely nikaal leta hai.",hinglish,electricity,medium,false,synthetic,dev
-authored-012,A power pole is leaning after its support cable snapped; no wire is on the ground.,en,electricity,high,false,synthetic,train
-authored-013,Wastewater is bubbling from a covered inspection chamber onto a parking area.,en,drainage,high,false,synthetic,train
-authored-014,बारिश से पहले नाली की जाली सूखे पत्तों से भर गई है।,hi,drainage,medium,false,synthetic,dev
-authored-015,"Rainwater is ankle-deep in the pedestrian underpass, which remains open to foot traffic.",en,drainage,high,false,synthetic,train
-authored-016,The lights on the bridge switch off before midnight even though the timer is set later.,en,streetlights,medium,false,synthetic,train
-authored-017,Park ke paas light pole ka base toot gaya hai aur pole footpath ki taraf jhuk raha hai.,hinglish,streetlights,high,true,synthetic,dev
-authored-018,बस स्टॉप के पास पैदल रास्ते से स्पर्श संकेत वाली टाइलें गायब हैं।,hi,other,medium,false,synthetic,train
-authored-019,The handrail at the public library ramp has come loose at one end.,en,other,medium,false,synthetic,train
-authored-020,A cracked seesaw seat in the park has been taped off until it can be repaired.,en,other,low,false,synthetic,dev
+authored-001,The raised speed hump near the bus depot has broken into loose pieces.,en,roads,medium,false,human,train
+authored-002,Station ke paas cycle lane par construction ka gravel faila hua hai.,hinglish,roads,medium,false,human,train
+authored-003,Runoff has washed away part of the road shoulder beside the culvert; one lane remains open.,en,roads,high,false,human,train
+authored-004,Tap water has smelled metallic in our building on three mornings this week.,en,water,medium,false,human,train
+authored-005,मोहल्ले में पानी का टैंकर इस हफ़्ते दो बार नहीं आया।,hi,water,medium,false,human,dev
+authored-006,The public standpipe handle snapped and water is running continuously onto the pavement.,en,water,medium,false,human,train
+authored-007,The neighborhood public toilet door sticks and requires repeated effort to open.,en,sanitation,low,false,human,train
+authored-008,"Market ke waste compactor kaam nahi kar raha, kachra abhi bins ke andar hai.",hinglish,sanitation,medium,false,human,dev
+authored-009,Used medical needles are visible in an open waste bin beside the playground.,en,other,high,true,human,train
+authored-010,The electrical feeder cabinet at the bus shelter is open with live terminals exposed at hand height.,en,electricity,critical,true,human,train
+authored-011,"Voltage drop ke karan lift rukti hai, lekin staff passengers ko safely nikaal leta hai.",hinglish,electricity,medium,false,human,dev
+authored-012,A power pole is leaning after its support cable snapped; no wire is on the ground.,en,electricity,high,true,human,train
+authored-013,Wastewater is bubbling from a covered inspection chamber onto a parking area.,en,drainage,high,false,human,train
+authored-014,बारिश से पहले नाली की जाली सूखे पत्तों से भर गई है।,hi,drainage,low,false,human,dev
+authored-015,"Rainwater is ankle-deep in the pedestrian underpass, which remains open to foot traffic.",en,drainage,high,false,human,train
+authored-016,The lights on the bridge switch off before midnight even though the timer is set later.,en,streetlights,medium,false,human,train
+authored-017,Park ke paas light pole ka base toot gaya hai aur pole footpath ki taraf jhuk raha hai.,hinglish,streetlights,high,true,human,dev
+authored-018,बस स्टॉप के पास पैदल रास्ते से स्पर्श संकेत वाली टाइलें गायब हैं।,hi,other,medium,false,human,train
+authored-019,The handrail at the public library ramp has come loose at one end.,en,other,medium,false,human,train
+authored-020,A cracked seesaw seat in the park has been taped off until it can be repaired.,en,other,low,false,human,dev

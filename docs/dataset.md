@@ -19,7 +19,7 @@ Each complaint must have exactly one provenance row. Public records must include
 
 ## Annotation drafts
 
-`data/interim/annotation-draft-*.csv` records authored examples with proposed labels and review status. Draft rows use `draft_id` and `proposed_*` fields; they do not follow the complaint CSV contract. Assistant-reviewed authored examples may be promoted to training/development with `label_source=synthetic` and a provenance record. Only labels confirmed by a human may use `label_source=human`, and only human-labeled rows may enter the frozen test set.
+`data/interim/annotation-draft-*.csv` records authored examples with proposed labels and review status. Draft rows use `draft_id` and `proposed_*` fields; they do not follow the complaint CSV contract. Unreviewed generated labels use `label_source=synthetic`; labels confirmed by a human use `label_source=human`. A human can label training/development rows or the frozen test set, but only human-labeled rows may enter the test set.
 
 The current working table is `data/interim/complaints.csv`; it combines the 30-row pilot and the first 20 authored training/development examples. It contains no test data and is not suitable for performance evaluation.
 
