@@ -219,6 +219,16 @@ def validate_dataset_readiness(
     emergency_test_count = sum(
         row["split"] == "test" and row["is_emergency"] for row in rows
     )
+    category_counts = dict(Counter(row["category"] for row in rows))
+    language_counts = dict(Counter(row["language"] for row in rows))
+    urgency_counts = dict(Counter(row["urgency"] for row in rows))
+    label_source_counts = dict(Counter(row["label_source"] for row in rows))
+    emergency_split_counts = {
+        split: sum(
+            row["split"] == split and row["is_emergency"] for row in rows
+        )
+        for split in SPLITS
+    }
     target_gaps = []
     for label, actual, target in (
         ("total examples", len(rows), min_examples),
@@ -232,6 +242,11 @@ def validate_dataset_readiness(
         "total_examples": len(rows),
         "split_counts": counts,
         "test_emergency_count": emergency_test_count,
+        "emergency_split_counts": emergency_split_counts,
+        "category_counts": category_counts,
+        "language_counts": language_counts,
+        "urgency_counts": urgency_counts,
+        "label_source_counts": label_source_counts,
         "target_gaps": target_gaps,
         "cross_split_variant_candidates": variant_candidates,
     }

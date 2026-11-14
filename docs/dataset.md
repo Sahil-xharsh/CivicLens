@@ -1,7 +1,5 @@
 # Dataset preparation contract
 
-The complaint table keeps the fields documented in the label guide. Store text-source provenance in a companion CSV keyed by `complaint_id`, so public-source details do not get mixed with label provenance or model inputs.
-
 ## Provenance CSV
 
 The companion file uses these columns:
@@ -15,13 +13,13 @@ The companion file uses these columns:
 | `license` | License or reuse terms; use `not_applicable` for synthetic examples and `author-created` for authored examples. |
 | `accessed_on` | Access date for public sources in ISO `YYYY-MM-DD` format; leave blank otherwise. |
 
-Each complaint must have exactly one provenance row. Public records must include a license and access date. Keep restricted or personally identifying source material out of the repository, and remove direct personal identifiers from complaint text before model use.
+Each complaint must have exactly one provenance row. Public records must include a license and access date. Keep restricted or personally identifying source material out of the repository and remove direct personal identifiers from complaint text before model use.
 
 ## Annotation drafts
 
-`data/interim/annotation-draft-*.csv` records authored examples with proposed labels and review status. Draft rows use `draft_id` and `proposed_*` fields; they do not follow the complaint CSV contract. Unreviewed generated labels use `label_source=synthetic`; labels confirmed by a human use `label_source=human`. A human can label training/development rows or the frozen test set, but only human-labeled rows may enter the test set.
+`data/interim/annotation-draft-*.csv` records authored examples with proposed labels and review status. Draft rows use `draft_id` and `proposed_*` fields they do not follow the complaint CSV contract. Unreviewed generated labels use `label_source=synthetic` labels confirmed by a human use `label_source=human`. A human can label training/development rows or the frozen test set, but only human-labeled rows may enter the test set.
 
-The current working table is `data/interim/complaints.csv`; it combines the 30-row pilot and the first 20 authored training/development examples. It contains no test data and is not suitable for performance evaluation.
+The current working table is `data/interim/complaints.csv`; it combines the 30-row pilot and the first 41 human-reviewed authored training/development examples. It contains no test data and is not suitable for performance evaluation.
 
 ## Split and readiness checks
 
@@ -36,5 +34,7 @@ rows = load_dataset("data/interim/complaints.csv")
 sources = load_provenance("data/interim/provenance.csv")
 report = validate_dataset_readiness(rows, sources)
 ```
+
+For a compact report from the project root, run `python scripts/check_dataset.py`. Use `--complaints` and `--provenance` to check alternate files. Target shortfalls are shown in the report; they do not make a preparation dataset invalid.
 
 The readiness report counts rows by split and measures progress toward 300 total examples, 100 human-labeled test examples, and 20 emergency test examples. Target shortfalls are reported without rejecting the synthetic pilot. Keep the test set separate and frozen before model tuning; do not use the synthetic pilot for performance claims.

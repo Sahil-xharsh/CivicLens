@@ -49,3 +49,24 @@ authored-017,Park ke paas light pole ka base toot gaya hai aur pole footpath ki 
 authored-018,बस स्टॉप के पास पैदल रास्ते से स्पर्श संकेत वाली टाइलें गायब हैं।,hi,other,medium,false,human,train
 authored-019,The handrail at the public library ramp has come loose at one end.,en,other,medium,false,human,train
 authored-020,A cracked seesaw seat in the park has been taped off until it can be repaired.,en,other,low,false,human,dev
+authored-021,"A section of the cycle track has sunk and collects rainwater, forcing cyclists into the road.",en,roads,high,false,human,train
+authored-022,"गली के मोड़ पर सड़क की किनारी टूट गई है, पर गाड़ियाँ निकल सकती हैं।",hi,roads,medium,false,human,dev
+authored-023,The painted speed markings have worn away at the school crossing.,en,roads,low,false,human,train
+authored-024,Water from the public hand pump has stopped flowing since yesterday.,en,water,high,false,human,train
+authored-025,Society ke overhead tank ka float valve kaam nahi kar raha aur paani overflow ho raha hai.,hinglish,water,medium,false,human,dev
+authored-026,Several homes report a strong fuel-like smell in their tap water this morning.,en,water,high,true,human,train
+authored-027,"The public toilet flush in one stall is broken, but the other stalls are usable.",en,sanitation,low,false,human,train
+authored-028,Community hall ke bahar kachre ke dabbe hata diye gaye hain aur log bags side mein rakh rahe hain.,hinglish,sanitation,medium,false,human,dev
+authored-029,A broken glass bottle is mixed into the uncollected rubbish beside a crowded bus stop.,en,sanitation,high,false,human,train
+authored-030,The public electrical meter box is smoking beside the apartment entrance.,en,electricity,critical,true,human,train
+authored-031,"Market ki ek street par roz shaam ko power cut hota hai, aas-paas ki streets par bijli hai.",hinglish,electricity,medium,false,human,dev
+authored-032,A traffic signal has lost power at a busy intersection during the evening commute.,en,other,high,false,human,train
+authored-033,The storm drain grate is missing beside a marked pedestrian crossing.,en,drainage,high,true,human,train
+authored-034,"बारिश के बाद पानी पार्किंग क्षेत्र में जमा है, लेकिन घरों में नहीं घुसा।",hi,drainage,medium,false,human,dev
+authored-035,Sewage is backing up through floor drains in several shops on the block.,en,drainage,high,false,human,train
+authored-036,The streetlight near the post office stays on during daylight and turns off at night.,en,streetlights,low,false,human,train
+authored-037,"Bus stand ke waiting area ki saari lights band hain, lekin road lights chal rahi hain.",hinglish,other,medium,false,human,dev
+authored-038,The lamp on the pedestrian bridge flickers whenever it rains.,en,streetlights,medium,false,human,train
+authored-039,A vendor cart is blocking the tactile paving at the accessible bus stop.,en,other,medium,false,human,train
+authored-040,पुस्तकालय के बाहर सार्वजनिक नल का प्लेटफ़ॉर्म टूटा हुआ है।,hi,other,low,false,human,dev
+authored-041,Shattered glass from the public bus shelter panel is scattered across the seating area.,en,other,high,true,human,train
