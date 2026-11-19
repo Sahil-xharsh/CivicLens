@@ -1,0 +1,22 @@
+draft_id,text,language,proposed_category,proposed_urgency,proposed_is_emergency,proposed_split,review_status,source_type,source_reference
+draft-042,A section of paving outside the ward office has lifted and makes wheelchair access difficult.,en,roads,medium,false,train,assistant_reviewed,authored,authored-batch-003
+draft-043,दुकानों के सामने सड़क पर गिट्टी जमा है और दोपहिया वाहन फिसल रहे हैं।,hi,roads,high,false,dev,assistant_reviewed,authored,authored-batch-003
+draft-044,A road sign at the roundabout is bent and points toward the wrong exit.,en,roads,medium,false,train,assistant_reviewed,authored,authored-batch-003
+draft-045,The community water meter is cracked and its display can no longer be read.,en,water,low,false,train,assistant_reviewed,authored,authored-batch-003
+draft-046,पानी की सप्लाई रोज़ सुबह आधे घंटे देर से शुरू होती है।,hi,water,medium,false,dev,assistant_reviewed,authored,authored-batch-003
+draft-047,"A public hydrant is spraying water into the road, but nearby buildings still have supply.",en,water,medium,false,train,assistant_reviewed,authored,authored-batch-003
+draft-048,Waste collection has been missed for four days along the wholesale market lane.,en,sanitation,high,false,train,assistant_reviewed,authored,authored-batch-003
+draft-049,Apartment ke shared garbage room ka door jam hai aur bins andar nahi le ja paa rahe.,hinglish,sanitation,medium,false,dev,assistant_reviewed,authored,authored-batch-003
+draft-050,A dead animal has been left beside the public waste collection point since yesterday.,en,sanitation,high,false,train,assistant_reviewed,authored,authored-batch-003
+draft-051,The electrical supply to the neighborhood clinic has been unstable since morning.,en,electricity,high,false,train,assistant_reviewed,authored,authored-batch-003
+draft-052,A loose overhead wire is hanging low above a lane where people are walking.,en,electricity,high,true,dev,assistant_reviewed,authored,authored-batch-003
+draft-053,The power cabinet outside the community center is locked but its warning light keeps flashing.,en,electricity,medium,false,train,assistant_reviewed,authored,authored-batch-003
+draft-054,A culvert is blocked with branches and water is beginning to collect on the service road.,en,drainage,medium,false,train,assistant_reviewed,authored,authored-batch-003
+draft-055,"नाले से बदबू आ रही है, लेकिन पानी सड़क पर नहीं फैल रहा।",hi,drainage,medium,false,dev,assistant_reviewed,authored,authored-batch-003
+draft-056,The sewer inspection cover is rattling loudly whenever buses pass over it.,en,drainage,medium,false,train,assistant_reviewed,authored,authored-batch-003
+draft-057,The street lamp outside the post office switches off and on throughout the evening.,en,streetlights,medium,false,train,assistant_reviewed,authored,authored-batch-003
+draft-058,"Park ke walking track par do lamps ka cover toot gaya hai, bulb abhi jal raha hai.",hinglish,streetlights,low,false,dev,assistant_reviewed,authored,authored-batch-003
+draft-059,"A streetlight timer is set too early, leaving the road dark before sunrise.",en,streetlights,medium,false,train,assistant_reviewed,authored,authored-batch-003
+draft-060,The handrail beside the public clinic steps is missing its middle section.,en,other,medium,false,train,assistant_reviewed,authored,authored-batch-003
+draft-061,बस अड्डे के पास सार्वजनिक शौचालय का साइनबोर्ड गिरा हुआ है।,hi,other,low,false,dev,assistant_reviewed,authored,authored-batch-003
+draft-062,A damaged public drinking fountain has sharp metal edges exposed at child height.,en,other,high,true,train,assistant_reviewed,authored,authored-batch-003
