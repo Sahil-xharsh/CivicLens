@@ -1,0 +1,101 @@
+complaint_id,text,language,category,urgency,is_emergency,label_source,split
+test-001,A section of road has collapsed beside the bridge and left a deep drop at the edge.,en,roads,high,true,human,test
+test-002,मेन रोड पर गड्ढों से बचने के लिए बसें विपरीत लेन में जा रही हैं।,hi,roads,high,false,human,test
+test-003,The road surface outside the courthouse has several shallow cracks.,en,roads,low,false,human,test
+test-004,A steel construction plate has slid partly off the road trench near the crossing.,en,roads,high,true,human,test
+test-005,The curb beside the public garden is broken and difficult to cross with a stroller.,en,roads,medium,false,human,test
+test-006,Raat ko flyover ke neeche road ka ek hissa uneven lagta hai.,hinglish,roads,medium,false,human,test
+test-007,The lane marking at the school crossing has faded over the past month.,en,roads,low,false,human,test
+test-008,An open road excavation has no barrier beside the school walking route.,en,roads,critical,true,human,test
+test-009,A bus stop lay-by has sunk enough to tilt parked buses toward the road.,en,roads,high,false,human,test
+test-010,नगर अस्पताल के पीछे की सड़क पर मरम्मत के बाद पत्थर बिखरे हैं।,hi,roads,medium,false,human,test
+test-011,The raised crossing outside the market has a broken corner.,en,roads,medium,false,human,test
+test-012,A heavy drain cover is rocking in the middle of the traffic lane.,en,drainage,high,false,human,test
+test-013,The entrance road to the public stadium is closed by a failed surface patch.,en,roads,high,false,human,test
+test-014,Colony ki main road par speed hump ka paint poori tarah mit gaya hai.,hinglish,roads,low,false,human,test
+test-015,Loose paving blocks are scattered along the road beside the health center.,en,roads,medium,false,human,test
+test-016,Several homes on the upper floor have no water pressure this morning.,en,water,medium,false,human,test
+test-017,A large supply pipe burst and water is rushing into occupied ground-floor rooms.,en,water,critical,true,human,test
+test-018,पानी की टंकी भरने पर भी नल से पानी बहुत कम आ रहा है।,hi,water,medium,false,human,test
+test-019,The public tap near the temple has a loose handle and drips all day.,en,water,low,false,human,test
+test-020,A new reddish tint appeared in the tap water after a pipe repair.,en,water,high,false,human,test
+test-021,"Paani ki supply teen din se band hai, tanker ka schedule bhi nahi mila.",hinglish,water,high,false,human,test
+test-022,Water is bubbling from a cracked roadside service pipe near passing pedestrians.,en,water,high,false,human,test
+test-023,The public standpipe at the bus terminal has been removed without notice.,en,water,medium,false,human,test
+test-024,A leaking valve has created a small pool beside the community hall.,en,water,medium,false,human,test
+test-025,Several households report a chemical odor from their drinking water today.,en,water,high,true,human,test
+test-026,A water tanker arrived late to the neighborhood collection point.,en,water,medium,false,human,test
+test-027,The public fountain sprays sideways and leaves the walkway wet.,en,water,low,false,human,test
+test-028,The pipe to our building makes a loud vibration whenever water flows.,en,water,medium,false,human,test
+test-029,हैंडपंप का पानी पीला आ रहा है और आसपास के लोग पानी नहीं भर रहे।,hi,water,high,false,human,test
+test-030,A street-side water main is leaking beneath the paving stones.,en,water,high,false,human,test
+test-031,Garbage collection missed the clinic lane yesterday and today.,en,sanitation,medium,false,human,test
+test-032,A drum marked with chemical hazard symbols has spilled beside people waiting at the bus stop.,en,other,critical,true,human,test
+test-033,The public toilet near the station has no working handwashing tap.,en,sanitation,medium,false,human,test
+test-034,A broken glass shard is sticking out of the public waste container at hand height.,en,sanitation,high,true,human,test
+test-035,Market ke kachre ke dabbe bhar gaye hain aur unka pickup kal se nahi hua.,hinglish,sanitation,high,false,human,test
+test-036,The recycling bins at the library have not been emptied this week.,en,sanitation,low,false,human,test
+test-037,A municipal toilet stall door is stuck shut and the facility is crowded.,en,sanitation,high,false,human,test
+test-038,The rubbish pickup point has shifted and residents cannot find the new location.,en,sanitation,medium,false,human,test
+test-039,Loose medical needles are visible on the ground beside the playground entrance.,en,other,high,true,human,test
+test-040,A public restroom has a broken flush in one cubicle.,en,sanitation,low,false,human,test
+test-041,The waste truck has not reached the outer lane for several collection cycles.,en,sanitation,high,false,human,test
+test-042,A pile of wet leaves and household rubbish is blocking the market pickup area.,en,sanitation,medium,false,human,test
+test-043,The public washroom at the park is locked during its posted opening hours.,en,sanitation,medium,false,human,test
+test-044,The garbage point has no separate bin for food waste after the old one broke.,en,sanitation,low,false,human,test
+test-045,Overflowing refuse is attracting animals beside the school kitchen entrance.,en,sanitation,high,false,human,test
+test-046,Smoke is coming from an electrical panel mounted beside the public clinic door.,en,electricity,critical,true,human,test
+test-047,The neighborhood loses power for a short period almost every evening.,en,electricity,medium,false,human,test
+test-048,A live cable has fallen across the only walkway to the bus platform.,en,electricity,critical,true,human,test
+test-049,The public lift at the railway footbridge is not receiving power.,en,electricity,medium,false,human,test
+test-050,A transformer is making a loud humming noise but there are no sparks or smoke.,en,electricity,medium,false,human,test
+test-051,"Gali ke electric box se chingari nikal rahi hai, log uske paas se guzar rahe hain.",hinglish,electricity,critical,true,human,test
+test-052,Voltage drops in the afternoon across the entire apartment block.,en,electricity,medium,false,human,test
+test-053,An overhead wire is sagging low above a crowded public footpath.,en,electricity,high,true,human,test
+test-054,The electricity meter outside the library has a cracked display.,en,electricity,low,false,human,test
+test-055,The switch box beside the market awning has an exposed live terminal.,en,electricity,critical,true,human,test
+test-056,The public pump's electrical supply trips whenever it starts.,en,electricity,medium,false,human,test
+test-057,"A power pole support wire is loose beside the road, but the pole remains upright.",en,electricity,high,false,human,test
+test-058,हमारे इलाके में बिजली की सप्लाई कल रात से बंद है।,hi,electricity,high,false,human,test
+test-059,The storm drain in front of the school has stopped carrying rainwater.,en,drainage,medium,false,human,test
+test-060,Floodwater is rising inside homes and residents are trapped on the upper floor.,en,drainage,critical,true,human,test
+test-061,A sewer cover has disappeared beside the crossing and the opening is exposed.,en,drainage,high,true,human,test
+test-062,बारिश के बाद नाली का पानी पार्किंग की दीवार तक जमा हो गया।,hi,drainage,medium,false,human,test
+test-063,Wastewater is seeping from a closed manhole onto the service lane.,en,drainage,high,false,human,test
+test-064,The drain beside the market has a persistent bad smell after cleaning.,en,drainage,medium,false,human,test
+test-065,A storm drain grille has lifted and leaves a gap where children walk.,en,drainage,high,true,human,test
+test-066,Nali ka paani monsoon ke baad bus stop ke paas jama rehta hai.,hinglish,drainage,medium,false,human,test
+test-067,Water is backing up in the underground parking ramp after a blocked drain.,en,drainage,high,false,human,test
+test-068,A broken sewer connection has flooded the storeroom of an occupied shop.,en,drainage,critical,false,human,test
+test-069,The drain outlet near the park is covered by a thick layer of silt.,en,drainage,medium,false,human,test
+test-070,An open drainage channel has no railing along the crowded pedestrian stretch.,en,drainage,high,true,human,test
+test-071,Rainwater is collecting around the public library steps but has not entered the building.,en,drainage,medium,false,human,test
+test-072,The sewer line is blocked and wastewater is flowing into several shop entrances.,en,drainage,high,false,human,test
+test-073,A stormwater pipe is discharging onto the footpath instead of into the drain.,en,drainage,medium,false,human,test
+test-074,A street lamp at the end of the bridge has been dark for a week.,en,streetlights,medium,false,human,test
+test-075,A lamp pole is leaning over the footpath after its base cracked.,en,streetlights,high,true,human,test
+test-076,The lights on the main avenue switch off before the evening rush.,en,streetlights,high,false,human,test
+test-077,The park's pathway lamps are covered in dust and give weak light.,en,streetlights,medium,false,human,test
+test-078,Bus stop ke paas street light roz raat ko kuch der ke liye band hoti hai.,hinglish,streetlights,medium,false,human,test
+test-079,A broken streetlight pole is lying across the public walking path.,en,streetlights,high,true,human,test
+test-080,One lamp at the public square has a failed timer and stays on all day.,en,streetlights,low,false,human,test
+test-081,The street lamps along the canal road are not turning on after sunset.,en,streetlights,high,false,human,test
+test-082,The pedestrian underpass lights flicker and leave the center section dim.,en,streetlights,medium,false,human,test
+test-083,A streetlight bracket is loose above the sidewalk and its lamp is swinging.,en,streetlights,high,true,human,test
+test-084,"The public park entrance lamp is out, while the rest of the park lights work.",en,streetlights,low,false,human,test
+test-085,फुटपाथ के ऊपर वाला लैम्प बारिश में बार-बार बुझ जाता है।,hi,streetlights,medium,false,human,test
+test-086,The light outside the community health center is blocked by a banner.,en,streetlights,medium,false,human,test
+test-087,A public library ramp is too steep for a wheelchair to use safely.,en,other,high,false,human,test
+test-088,A large glass panel has shattered across the public shelter seats.,en,other,high,true,human,test
+test-089,The handrail on the clinic access ramp has come away from the wall.,en,other,high,false,human,test
+test-090,A metal sign is hanging by one bolt above the entrance to the public hall.,en,other,high,true,human,test
+test-091,The accessible toilet at the bus terminal has a broken door lock.,en,sanitation,medium,false,human,test
+test-092,पार्क के झूले की सीट टूट गई है और उसे इस्तेमाल नहीं किया जा रहा।,hi,other,medium,false,human,test
+test-093,The public bench beside the clinic has a loose plank but remains usable.,en,other,low,false,human,test
+test-094,A broken concrete planter is blocking the entrance to the community center.,en,other,medium,false,human,test
+test-095,Loose sharp metal is exposed on the frame of the public drinking fountain.,en,other,high,true,human,test
+test-096,A tactile guide strip at the station entrance is missing several tiles.,en,other,medium,false,human,test
+test-097,The public bus shelter has no working rain cover over its seating area.,en,other,medium,false,human,test
+test-098,A park gate hinge has broken and the heavy gate cannot be secured.,en,other,medium,false,human,test
+test-099,A damaged drinking fountain is leaking onto the path but can still be used.,en,other,low,false,human,test
+test-100,A loose concrete slab is hanging above the doorway of a public hall.,en,other,high,true,human,test
