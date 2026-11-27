@@ -1,37 +1,43 @@
 # CivicLens
 
-CivicLens is a portfolio research project for classifying civic complaints and identifying.
+CivicLens is a portfolio research project for classifying civic complaints and identifying cases that may need human review.
+
 ## Current status
 
-- The label guide and CSV validator are in place.
-- The working dataset has 71 train/development rows: 30 synthetic pilot examples and 41 reviewed authored examples.
-- A further 129 train/development candidates and 100 test candidates are prepared separately for label review. The test candidate file is pending and is not a frozen evaluation set.
-- A TF-IDF and Logistic Regression baseline and development-only evaluation command are implemented. No test results or performance claims are available yet.
+- The label guide, dataset validator, and provenance records are in place.
+- The dataset has 300 rows: 170 human-labeled train/development examples, the 30-row synthetic pilot, and 100 human-labeled frozen test examples.
+- The TF-IDF and Logistic Regression baseline is implemented. On the frozen test set, category macro-F1 was 0.763, urgency macro-F1 was 0.534, and emergency recall was 6/24 (0.250). The report and limits are documented in `reports/baseline-results.md`.
 - The project is a research demo, not a live civic service.
 
 ## Setup
 
-Create an isolated Python environment and install the baseline dependency:
+Create an isolated Python environment and install the baseline dependencies:
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
 ```
 
-## Dataset checks
-
-From the project root, run:
+## Dataset check
 
 ```powershell
 .venv\Scripts\python scripts/check_dataset.py
 ```
 
-The report shows dataset size, split and label counts, target gaps, and possible cross-split text variants. Pending annotation files are not included in the model-ready complaint table.
+The report checks provenance, split integrity, counts, and possible cross-split text variants. It also verifies the checksum for the frozen test file.
 
-## Baseline development report
+## Baseline reports
+
+The development report fits on train rows and reports dev metrics:
 
 ```powershell
 .venv\Scripts\python scripts/train_baseline.py
 ```
 
-The baseline fits only rows marked `train` and reports metrics on `dev`. The report is for development only; use a human-reviewed, frozen test set for final evaluation.
+The frozen test report selects its emergency threshold from dev, verifies the test checksum, fits on train, and evaluates once on test:
+
+```powershell
+.venv\Scripts\python scripts/evaluate_baseline.py
+```
+
+The test report is written to `reports/baseline-test-report.json`. Results describe this authored dataset and do not establish real-world service performance.

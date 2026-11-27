@@ -8,7 +8,10 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from civiclens.baseline import TfidfComplaintBaseline  # noqa: E402
 from civiclens.data import DatasetError, load_dataset  # noqa: E402
-from civiclens.evaluation import evaluate_development  # noqa: E402
+from civiclens.evaluation import (  # noqa: E402
+    evaluate_development,
+    select_emergency_threshold,
+)
 
 
 def main() -> int:
@@ -16,14 +19,14 @@ def main() -> int:
     parser.add_argument(
         "--complaints",
         type=Path,
-        default=ROOT / "data" / "interim" / "complaints.csv",
-        help="complaint CSV (default: data/interim/complaints.csv)",
+        default=ROOT / "data" / "processed" / "train_dev.csv",
+        help="train/development CSV (default: data/processed/train_dev.csv)",
     )
     parser.add_argument(
         "--emergency-threshold",
         type=float,
-        default=0.5,
-        help="emergency-risk probability threshold (default: 0.5)",
+        default=None,
+        help="override the emergency threshold selected from dev data",
     )
     args = parser.parse_args()
 
@@ -34,23 +37,30 @@ def main() -> int:
         if not dev_rows:
             raise DatasetError("No dev rows are available for threshold development.")
         model = TfidfComplaintBaseline().fit(train_rows)
+        threshold_selection = select_emergency_threshold(model, dev_rows)
+        threshold = (
+            args.emergency_threshold
+            if args.emergency_threshold is not None
+            else threshold_selection["threshold"]
+        )
         report = evaluate_development(
             model,
             dev_rows,
-            emergency_threshold=args.emergency_threshold,
+            emergency_threshold=threshold,
         )
     except (DatasetError, OSError, ValueError, RuntimeError) as error:
         print(f"Baseline run failed: {error}", file=sys.stderr)
         return 1
 
     report["training_count"] = len(train_rows)
+    report["threshold_selection"] = threshold_selection
     report["training_label_sources"] = {
         source: sum(row["label_source"] == source for row in train_rows)
         for source in sorted({row["label_source"] for row in train_rows})
     }
     report["limitations"] = [
         "This report uses the development split only; it is not a held-out test result.",
-        "The current dataset includes a synthetic pilot and has not reached the planned size.",
+        "The training data includes the 30-row synthetic pilot.",
         "TF-IDF class probabilities are not calibrated confidence estimates.",
     ]
     print(json.dumps(report, ensure_ascii=False, indent=2))

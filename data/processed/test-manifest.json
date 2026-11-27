@@ -1,0 +1,7 @@
+{
+  "file": "test.csv",
+  "rows": 100,
+  "emergency_rows": 24,
+  "sha256": "544b3996f636899a540db74e3bd661d67b105978e362d575220fe688a26a626a",
+  "frozen_on": "2026-11-24"
+}

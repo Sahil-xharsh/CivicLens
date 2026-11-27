@@ -77,19 +77,52 @@ def _wilson_interval(caught: int, total: int) -> list[float] | None:
     return [max(0.0, center - margin), min(1.0, center + margin)]
 
 
-def evaluate_development(
-    model,
-    rows: list[dict],
-    *,
-    emergency_threshold: float = 0.5,
-) -> dict:
-    """Evaluate on dev rows only and return counts, metrics, and intervals."""
+def select_emergency_threshold(model, rows: list[dict]) -> dict:
+    """Choose the dev threshold with best emergency F1; ties use the higher threshold."""
     if not rows:
         raise ValueError("Development rows cannot be empty.")
     invalid = [row.get("complaint_id", "?") for row in rows if row.get("split") != "dev"]
     if invalid:
         raise ValueError(
-            "Development evaluation accepts dev rows only; rejected: "
+            "Threshold selection accepts dev rows only; rejected: "
+            + ", ".join(invalid)
+        )
+
+    probabilities = [
+        prediction.emergency_probability
+        for prediction in model.predict_many([row["text"] for row in rows])
+    ]
+    actual = [bool(row["is_emergency"]) for row in rows]
+    thresholds = [index / 100 for index in range(0, 101, 5)]
+    scored = []
+    for threshold in thresholds:
+        predicted = [probability >= threshold for probability in probabilities]
+        score = f1_score(actual, predicted, pos_label=True, zero_division=0)
+        scored.append((float(score), threshold))
+
+    best_f1, best_threshold = max(scored, key=lambda item: (item[0], item[1]))
+    return {
+        "method": "highest emergency F1 on dev; ties choose the higher threshold",
+        "threshold": best_threshold,
+        "emergency_f1": best_f1,
+        "dev_emergency_count": sum(actual),
+    }
+
+
+def evaluate_split(
+    model,
+    rows: list[dict],
+    *,
+    split: str,
+    emergency_threshold: float = 0.5,
+) -> dict:
+    """Evaluate one explicitly named split and return counts, metrics, and intervals."""
+    if not rows:
+        raise ValueError(f"{split} rows cannot be empty.")
+    invalid = [row.get("complaint_id", "?") for row in rows if row.get("split") != split]
+    if invalid:
+        raise ValueError(
+            f"{split} evaluation accepts {split} rows only; rejected: "
             + ", ".join(invalid)
         )
 
@@ -104,7 +137,10 @@ def evaluate_development(
     emergency_actual = [bool(row["is_emergency"]) for row in rows]
     emergency_predicted = [prediction.is_emergency for prediction in predictions]
 
-    caught = sum(actual and predicted for actual, predicted in zip(emergency_actual, emergency_predicted))
+    caught = sum(
+        actual and predicted
+        for actual, predicted in zip(emergency_actual, emergency_predicted)
+    )
     emergency_total = sum(emergency_actual)
     category_f1 = float(
         f1_score(
@@ -132,7 +168,7 @@ def evaluate_development(
         )
 
     return {
-        "split": "dev",
+        "split": split,
         "example_count": len(rows),
         "emergency_threshold": emergency_threshold,
         "category": {
@@ -164,3 +200,18 @@ def evaluate_development(
             for language, scores in sorted(by_language.items())
         },
     }
+
+
+def evaluate_development(
+    model,
+    rows: list[dict],
+    *,
+    emergency_threshold: float = 0.5,
+) -> dict:
+    """Evaluate on dev rows only."""
+    return evaluate_split(
+        model,
+        rows,
+        split="dev",
+        emergency_threshold=emergency_threshold,
+    )

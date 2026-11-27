@@ -1,0 +1,1340 @@
+{
+  "model": "TF-IDF with Logistic Regression",
+  "training_count": 163,
+  "development_count": 37,
+  "test_count": 100,
+  "test_manifest_sha256": "544b3996f636899a540db74e3bd661d67b105978e362d575220fe688a26a626a",
+  "threshold_selection": {
+    "method": "highest emergency F1 on dev; ties choose the higher threshold",
+    "threshold": 0.55,
+    "emergency_f1": 0.5,
+    "dev_emergency_count": 3
+  },
+  "development_metrics": {
+    "split": "dev",
+    "example_count": 37,
+    "emergency_threshold": 0.55,
+    "category": {
+      "macro_f1": 0.4324375072822277,
+      "macro_f1_ci_95": [
+        0.23377789279963196,
+        0.5750467389753103
+      ],
+      "per_category": {
+        "roads": {
+          "precision": 0.2777777777777778,
+          "recall": 1.0,
+          "f1": 0.43478260869565216
+        },
+        "water": {
+          "precision": 0.6,
+          "recall": 0.5,
+          "f1": 0.5454545454545454
+        },
+        "sanitation": {
+          "precision": 0.5,
+          "recall": 0.4,
+          "f1": 0.4444444444444444
+        },
+        "electricity": {
+          "precision": 0.5,
+          "recall": 0.2,
+          "f1": 0.2857142857142857
+        },
+        "drainage": {
+          "precision": 0.5,
+          "recall": 0.16666666666666666,
+          "f1": 0.25
+        },
+        "streetlights": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "other": {
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1": 0.4
+        }
+      }
+    },
+    "urgency": {
+      "macro_f1": 0.3252599890530925,
+      "macro_f1_ci_95": [
+        0.19166666666666668,
+        0.47934046331858277
+      ],
+      "per_urgency": {
+        "low": {
+          "precision": 1.0,
+          "recall": 0.125,
+          "f1": 0.2222222222222222
+        },
+        "medium": {
+          "precision": 0.6571428571428571,
+          "recall": 1.0,
+          "f1": 0.7931034482758621
+        },
+        "high": {
+          "precision": 1.0,
+          "recall": 0.16666666666666666,
+          "f1": 0.2857142857142857
+        },
+        "critical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "emergency_recall": {
+      "caught": 1,
+      "total": 3,
+      "value": 0.3333333333333333,
+      "ci_95": [
+        0.06149194472039621,
+        0.7923403991979522
+      ]
+    },
+    "category_accuracy_by_language": {
+      "en": 0.5,
+      "hi": 0.3333333333333333,
+      "hinglish": 0.5
+    }
+  },
+  "test_metrics": {
+    "split": "test",
+    "example_count": 100,
+    "emergency_threshold": 0.55,
+    "category": {
+      "macro_f1": 0.7631795432837309,
+      "macro_f1_ci_95": [
+        0.6738240366471641,
+        0.8424865101474237
+      ],
+      "per_category": {
+        "roads": {
+          "precision": 0.7058823529411765,
+          "recall": 0.8571428571428571,
+          "f1": 0.7741935483870968
+        },
+        "water": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666
+        },
+        "sanitation": {
+          "precision": 0.7692307692307693,
+          "recall": 0.7142857142857143,
+          "f1": 0.7407407407407407
+        },
+        "electricity": {
+          "precision": 0.7333333333333333,
+          "recall": 0.8461538461538461,
+          "f1": 0.7857142857142857
+        },
+        "drainage": {
+          "precision": 0.8666666666666667,
+          "recall": 0.8125,
+          "f1": 0.8387096774193549
+        },
+        "streetlights": {
+          "precision": 1.0,
+          "recall": 0.7692307692307693,
+          "f1": 0.8695652173913043
+        },
+        "other": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666
+        }
+      }
+    },
+    "urgency": {
+      "macro_f1": 0.5336298377028714,
+      "macro_f1_ci_95": [
+        0.4020640587116451,
+        0.6301269543032451
+      ],
+      "per_urgency": {
+        "low": {
+          "precision": 0.2727272727272727,
+          "recall": 0.23076923076923078,
+          "f1": 0.25
+        },
+        "medium": {
+          "precision": 0.5510204081632653,
+          "recall": 0.675,
+          "f1": 0.6067415730337079
+        },
+        "high": {
+          "precision": 0.6470588235294118,
+          "recall": 0.5789473684210527,
+          "f1": 0.6111111111111112
+        },
+        "critical": {
+          "precision": 0.8333333333333334,
+          "recall": 0.5555555555555556,
+          "f1": 0.6666666666666666
+        }
+      }
+    },
+    "emergency_recall": {
+      "caught": 6,
+      "total": 24,
+      "value": 0.25,
+      "ci_95": [
+        0.11999366228595004,
+        0.44899444005154004
+      ]
+    },
+    "category_accuracy_by_language": {
+      "en": 0.788235294117647,
+      "hi": 0.375,
+      "hinglish": 0.8571428571428571
+    }
+  },
+  "test_errors_for_review": [
+    {
+      "complaint_id": "test-001",
+      "language": "en",
+      "text": "A section of road has collapsed beside the bridge and left a deep drop at the edge.",
+      "actual": {
+        "category": "roads",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.38904856886538836
+      }
+    },
+    {
+      "complaint_id": "test-002",
+      "language": "hi",
+      "text": "मेन रोड पर गड्ढों से बचने के लिए बसें विपरीत लेन में जा रही हैं।",
+      "actual": {
+        "category": "roads",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.33822633178819556
+      }
+    },
+    {
+      "complaint_id": "test-003",
+      "language": "en",
+      "text": "The road surface outside the courthouse has several shallow cracks.",
+      "actual": {
+        "category": "roads",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.2885238723511307
+      }
+    },
+    {
+      "complaint_id": "test-004",
+      "language": "en",
+      "text": "A steel construction plate has slid partly off the road trench near the crossing.",
+      "actual": {
+        "category": "roads",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.33978044451176437
+      }
+    },
+    {
+      "complaint_id": "test-005",
+      "language": "en",
+      "text": "The curb beside the public garden is broken and difficult to cross with a stroller.",
+      "actual": {
+        "category": "roads",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "sanitation",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.4593257832652223
+      }
+    },
+    {
+      "complaint_id": "test-007",
+      "language": "en",
+      "text": "The lane marking at the school crossing has faded over the past month.",
+      "actual": {
+        "category": "roads",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.45734834883787684
+      }
+    },
+    {
+      "complaint_id": "test-009",
+      "language": "en",
+      "text": "A bus stop lay-by has sunk enough to tilt parked buses toward the road.",
+      "actual": {
+        "category": "roads",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.31044456972887696
+      }
+    },
+    {
+      "complaint_id": "test-013",
+      "language": "en",
+      "text": "The entrance road to the public stadium is closed by a failed surface patch.",
+      "actual": {
+        "category": "roads",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.38249999514742566
+      }
+    },
+    {
+      "complaint_id": "test-014",
+      "language": "hinglish",
+      "text": "Colony ki main road par speed hump ka paint poori tarah mit gaya hai.",
+      "actual": {
+        "category": "roads",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.35107946777002347
+      }
+    },
+    {
+      "complaint_id": "test-016",
+      "language": "en",
+      "text": "Several homes on the upper floor have no water pressure this morning.",
+      "actual": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.41817384515211664
+      }
+    },
+    {
+      "complaint_id": "test-017",
+      "language": "en",
+      "text": "A large supply pipe burst and water is rushing into occupied ground-floor rooms.",
+      "actual": {
+        "category": "water",
+        "urgency": "critical",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "critical",
+        "is_emergency": false,
+        "emergency_probability": 0.509401988065269
+      }
+    },
+    {
+      "complaint_id": "test-018",
+      "language": "hi",
+      "text": "पानी की टंकी भरने पर भी नल से पानी बहुत कम आ रहा है।",
+      "actual": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.34048799730990775
+      }
+    },
+    {
+      "complaint_id": "test-019",
+      "language": "en",
+      "text": "The public tap near the temple has a loose handle and drips all day.",
+      "actual": {
+        "category": "water",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.34411485650545576
+      }
+    },
+    {
+      "complaint_id": "test-021",
+      "language": "hinglish",
+      "text": "Paani ki supply teen din se band hai, tanker ka schedule bhi nahi mila.",
+      "actual": {
+        "category": "water",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.3409708881957431
+      }
+    },
+    {
+      "complaint_id": "test-023",
+      "language": "en",
+      "text": "The public standpipe at the bus terminal has been removed without notice.",
+      "actual": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "sanitation",
+        "urgency": "low",
+        "is_emergency": false,
+        "emergency_probability": 0.31151986168241846
+      }
+    },
+    {
+      "complaint_id": "test-024",
+      "language": "en",
+      "text": "A leaking valve has created a small pool beside the community hall.",
+      "actual": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "low",
+        "is_emergency": false,
+        "emergency_probability": 0.37985125349102433
+      }
+    },
+    {
+      "complaint_id": "test-025",
+      "language": "en",
+      "text": "Several households report a chemical odor from their drinking water today.",
+      "actual": {
+        "category": "water",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.4056948320499337
+      }
+    },
+    {
+      "complaint_id": "test-026",
+      "language": "en",
+      "text": "A water tanker arrived late to the neighborhood collection point.",
+      "actual": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "sanitation",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.3152498871080339
+      }
+    },
+    {
+      "complaint_id": "test-027",
+      "language": "en",
+      "text": "The public fountain sprays sideways and leaves the walkway wet.",
+      "actual": {
+        "category": "water",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.43753558197461184
+      }
+    },
+    {
+      "complaint_id": "test-029",
+      "language": "hi",
+      "text": "हैंडपंप का पानी पीला आ रहा है और आसपास के लोग पानी नहीं भर रहे।",
+      "actual": {
+        "category": "water",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.3434043534325161
+      }
+    },
+    {
+      "complaint_id": "test-030",
+      "language": "en",
+      "text": "A street-side water main is leaking beneath the paving stones.",
+      "actual": {
+        "category": "water",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.43723503430295485
+      }
+    },
+    {
+      "complaint_id": "test-032",
+      "language": "en",
+      "text": "A drum marked with chemical hazard symbols has spilled beside people waiting at the bus stop.",
+      "actual": {
+        "category": "other",
+        "urgency": "critical",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "critical",
+        "is_emergency": false,
+        "emergency_probability": 0.518352347464448
+      }
+    },
+    {
+      "complaint_id": "test-033",
+      "language": "en",
+      "text": "The public toilet near the station has no working handwashing tap.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "sanitation",
+        "urgency": "low",
+        "is_emergency": false,
+        "emergency_probability": 0.3257000869418016
+      }
+    },
+    {
+      "complaint_id": "test-034",
+      "language": "en",
+      "text": "A broken glass shard is sticking out of the public waste container at hand height.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "sanitation",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.5178986892476066
+      }
+    },
+    {
+      "complaint_id": "test-035",
+      "language": "hinglish",
+      "text": "Market ke kachre ke dabbe bhar gaye hain aur unka pickup kal se nahi hua.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "sanitation",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.3793417159767077
+      }
+    },
+    {
+      "complaint_id": "test-036",
+      "language": "en",
+      "text": "The recycling bins at the library have not been emptied this week.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "low",
+        "is_emergency": false,
+        "emergency_probability": 0.2817071284162754
+      }
+    },
+    {
+      "complaint_id": "test-037",
+      "language": "en",
+      "text": "A municipal toilet stall door is stuck shut and the facility is crowded.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "sanitation",
+        "urgency": "low",
+        "is_emergency": false,
+        "emergency_probability": 0.3768115685538116
+      }
+    },
+    {
+      "complaint_id": "test-038",
+      "language": "en",
+      "text": "The rubbish pickup point has shifted and residents cannot find the new location.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "sanitation",
+        "urgency": "low",
+        "is_emergency": false,
+        "emergency_probability": 0.32902024769513655
+      }
+    },
+    {
+      "complaint_id": "test-041",
+      "language": "en",
+      "text": "The waste truck has not reached the outer lane for several collection cycles.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "sanitation",
+        "urgency": "low",
+        "is_emergency": false,
+        "emergency_probability": 0.33220961591127635
+      }
+    },
+    {
+      "complaint_id": "test-043",
+      "language": "en",
+      "text": "The public washroom at the park is locked during its posted opening hours.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.3543046595520341
+      }
+    },
+    {
+      "complaint_id": "test-044",
+      "language": "en",
+      "text": "The garbage point has no separate bin for food waste after the old one broke.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "sanitation",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.36985025070998484
+      }
+    },
+    {
+      "complaint_id": "test-045",
+      "language": "en",
+      "text": "Overflowing refuse is attracting animals beside the school kitchen entrance.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "drainage",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.5243624528172396
+      }
+    },
+    {
+      "complaint_id": "test-046",
+      "language": "en",
+      "text": "Smoke is coming from an electrical panel mounted beside the public clinic door.",
+      "actual": {
+        "category": "electricity",
+        "urgency": "critical",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.5097773114175167
+      }
+    },
+    {
+      "complaint_id": "test-048",
+      "language": "en",
+      "text": "A live cable has fallen across the only walkway to the bus platform.",
+      "actual": {
+        "category": "electricity",
+        "urgency": "critical",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.5157369679432809
+      }
+    },
+    {
+      "complaint_id": "test-050",
+      "language": "en",
+      "text": "A transformer is making a loud humming noise but there are no sparks or smoke.",
+      "actual": {
+        "category": "electricity",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.49667161210999944
+      }
+    },
+    {
+      "complaint_id": "test-051",
+      "language": "hinglish",
+      "text": "Gali ke electric box se chingari nikal rahi hai, log uske paas se guzar rahe hain.",
+      "actual": {
+        "category": "electricity",
+        "urgency": "critical",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.47896836284409394
+      }
+    },
+    {
+      "complaint_id": "test-052",
+      "language": "en",
+      "text": "Voltage drops in the afternoon across the entire apartment block.",
+      "actual": {
+        "category": "electricity",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.36680282160769634
+      }
+    },
+    {
+      "complaint_id": "test-053",
+      "language": "en",
+      "text": "An overhead wire is sagging low above a crowded public footpath.",
+      "actual": {
+        "category": "electricity",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "critical",
+        "is_emergency": true,
+        "emergency_probability": 0.5890440561886083
+      }
+    },
+    {
+      "complaint_id": "test-055",
+      "language": "en",
+      "text": "The switch box beside the market awning has an exposed live terminal.",
+      "actual": {
+        "category": "electricity",
+        "urgency": "critical",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "high",
+        "is_emergency": true,
+        "emergency_probability": 0.6241537331000261
+      }
+    },
+    {
+      "complaint_id": "test-057",
+      "language": "en",
+      "text": "A power pole support wire is loose beside the road, but the pole remains upright.",
+      "actual": {
+        "category": "electricity",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "high",
+        "is_emergency": true,
+        "emergency_probability": 0.5798726524626074
+      }
+    },
+    {
+      "complaint_id": "test-058",
+      "language": "hi",
+      "text": "हमारे इलाके में बिजली की सप्लाई कल रात से बंद है।",
+      "actual": {
+        "category": "electricity",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.37388744355017356
+      }
+    },
+    {
+      "complaint_id": "test-059",
+      "language": "en",
+      "text": "The storm drain in front of the school has stopped carrying rainwater.",
+      "actual": {
+        "category": "drainage",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "drainage",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.4312284738684418
+      }
+    },
+    {
+      "complaint_id": "test-060",
+      "language": "en",
+      "text": "Floodwater is rising inside homes and residents are trapped on the upper floor.",
+      "actual": {
+        "category": "drainage",
+        "urgency": "critical",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "drainage",
+        "urgency": "critical",
+        "is_emergency": false,
+        "emergency_probability": 0.5086638025024045
+      }
+    },
+    {
+      "complaint_id": "test-062",
+      "language": "hi",
+      "text": "बारिश के बाद नाली का पानी पार्किंग की दीवार तक जमा हो गया।",
+      "actual": {
+        "category": "drainage",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.36911196580753936
+      }
+    },
+    {
+      "complaint_id": "test-064",
+      "language": "en",
+      "text": "The drain beside the market has a persistent bad smell after cleaning.",
+      "actual": {
+        "category": "drainage",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "drainage",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.4882064271204281
+      }
+    },
+    {
+      "complaint_id": "test-065",
+      "language": "en",
+      "text": "A storm drain grille has lifted and leaves a gap where children walk.",
+      "actual": {
+        "category": "drainage",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "drainage",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.4465271896975058
+      }
+    },
+    {
+      "complaint_id": "test-066",
+      "language": "hinglish",
+      "text": "Nali ka paani monsoon ke baad bus stop ke paas jama rehta hai.",
+      "actual": {
+        "category": "drainage",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.2946803634500361
+      }
+    },
+    {
+      "complaint_id": "test-070",
+      "language": "en",
+      "text": "An open drainage channel has no railing along the crowded pedestrian stretch.",
+      "actual": {
+        "category": "drainage",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "drainage",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.5438938967302823
+      }
+    },
+    {
+      "complaint_id": "test-071",
+      "language": "en",
+      "text": "Rainwater is collecting around the public library steps but has not entered the building.",
+      "actual": {
+        "category": "drainage",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.37305732683038045
+      }
+    },
+    {
+      "complaint_id": "test-073",
+      "language": "en",
+      "text": "A stormwater pipe is discharging onto the footpath instead of into the drain.",
+      "actual": {
+        "category": "drainage",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "drainage",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.350008676251437
+      }
+    },
+    {
+      "complaint_id": "test-075",
+      "language": "en",
+      "text": "A lamp pole is leaning over the footpath after its base cracked.",
+      "actual": {
+        "category": "streetlights",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "high",
+        "is_emergency": true,
+        "emergency_probability": 0.5776681224946592
+      }
+    },
+    {
+      "complaint_id": "test-076",
+      "language": "en",
+      "text": "The lights on the main avenue switch off before the evening rush.",
+      "actual": {
+        "category": "streetlights",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "streetlights",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.32821033569942043
+      }
+    },
+    {
+      "complaint_id": "test-077",
+      "language": "en",
+      "text": "The park's pathway lamps are covered in dust and give weak light.",
+      "actual": {
+        "category": "streetlights",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "streetlights",
+        "urgency": "low",
+        "is_emergency": false,
+        "emergency_probability": 0.34263115578896286
+      }
+    },
+    {
+      "complaint_id": "test-079",
+      "language": "en",
+      "text": "A broken streetlight pole is lying across the public walking path.",
+      "actual": {
+        "category": "streetlights",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.4726269866541247
+      }
+    },
+    {
+      "complaint_id": "test-080",
+      "language": "en",
+      "text": "One lamp at the public square has a failed timer and stays on all day.",
+      "actual": {
+        "category": "streetlights",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "streetlights",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.31837711285483694
+      }
+    },
+    {
+      "complaint_id": "test-083",
+      "language": "en",
+      "text": "A streetlight bracket is loose above the sidewalk and its lamp is swinging.",
+      "actual": {
+        "category": "streetlights",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "streetlights",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.5416334358421822
+      }
+    },
+    {
+      "complaint_id": "test-084",
+      "language": "en",
+      "text": "The public park entrance lamp is out, while the rest of the park lights work.",
+      "actual": {
+        "category": "streetlights",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "streetlights",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.3078058721632756
+      }
+    },
+    {
+      "complaint_id": "test-085",
+      "language": "hi",
+      "text": "फुटपाथ के ऊपर वाला लैम्प बारिश में बार-बार बुझ जाता है।",
+      "actual": {
+        "category": "streetlights",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "roads",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.38720686434924273
+      }
+    },
+    {
+      "complaint_id": "test-087",
+      "language": "en",
+      "text": "A public library ramp is too steep for a wheelchair to use safely.",
+      "actual": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.36204298166566584
+      }
+    },
+    {
+      "complaint_id": "test-088",
+      "language": "en",
+      "text": "A large glass panel has shattered across the public shelter seats.",
+      "actual": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.4735905208231724
+      }
+    },
+    {
+      "complaint_id": "test-089",
+      "language": "en",
+      "text": "The handrail on the clinic access ramp has come away from the wall.",
+      "actual": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.34037432951294566
+      }
+    },
+    {
+      "complaint_id": "test-090",
+      "language": "en",
+      "text": "A metal sign is hanging by one bolt above the entrance to the public hall.",
+      "actual": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.5078580865935027
+      }
+    },
+    {
+      "complaint_id": "test-091",
+      "language": "en",
+      "text": "The accessible toilet at the bus terminal has a broken door lock.",
+      "actual": {
+        "category": "sanitation",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "low",
+        "is_emergency": false,
+        "emergency_probability": 0.3777311771425663
+      }
+    },
+    {
+      "complaint_id": "test-092",
+      "language": "hi",
+      "text": "पार्क के झूले की सीट टूट गई है और उसे इस्तेमाल नहीं किया जा रहा।",
+      "actual": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.3375285270171164
+      }
+    },
+    {
+      "complaint_id": "test-093",
+      "language": "en",
+      "text": "The public bench beside the clinic has a loose plank but remains usable.",
+      "actual": {
+        "category": "other",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.38781465904032386
+      }
+    },
+    {
+      "complaint_id": "test-094",
+      "language": "en",
+      "text": "A broken concrete planter is blocking the entrance to the community center.",
+      "actual": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "drainage",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.3938641926161146
+      }
+    },
+    {
+      "complaint_id": "test-095",
+      "language": "en",
+      "text": "Loose sharp metal is exposed on the frame of the public drinking fountain.",
+      "actual": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.5225557604975148
+      }
+    },
+    {
+      "complaint_id": "test-097",
+      "language": "en",
+      "text": "The public bus shelter has no working rain cover over its seating area.",
+      "actual": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.5237554857970297
+      }
+    },
+    {
+      "complaint_id": "test-098",
+      "language": "en",
+      "text": "A park gate hinge has broken and the heavy gate cannot be secured.",
+      "actual": {
+        "category": "other",
+        "urgency": "medium",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.3638326102822075
+      }
+    },
+    {
+      "complaint_id": "test-099",
+      "language": "en",
+      "text": "A damaged drinking fountain is leaking onto the path but can still be used.",
+      "actual": {
+        "category": "other",
+        "urgency": "low",
+        "is_emergency": false
+      },
+      "predicted": {
+        "category": "water",
+        "urgency": "medium",
+        "is_emergency": false,
+        "emergency_probability": 0.38557980094959743
+      }
+    },
+    {
+      "complaint_id": "test-100",
+      "language": "en",
+      "text": "A loose concrete slab is hanging above the doorway of a public hall.",
+      "actual": {
+        "category": "other",
+        "urgency": "high",
+        "is_emergency": true
+      },
+      "predicted": {
+        "category": "electricity",
+        "urgency": "high",
+        "is_emergency": false,
+        "emergency_probability": 0.5009230969135735
+      }
+    }
+  ],
+  "limitations": [
+    "The training split includes the 30-row synthetic pilot.",
+    "The report measures this authored dataset and does not establish real-world service performance.",
+    "TF-IDF class probabilities are not calibrated confidence estimates."
+  ]
+}

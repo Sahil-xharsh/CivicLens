@@ -15,30 +15,24 @@ The companion file uses these columns:
 
 Each complaint must have exactly one provenance row. Public records must include a license and access date. Keep restricted or personally identifying source material out of the repository and remove direct personal identifiers from complaint text before model use.
 
-## Annotation drafts
+## Reviewed dataset
 
-`data/interim/annotation-draft-*.csv` records authored examples with proposed labels and review status. Draft rows use `draft_id` and `proposed_*` fields, so they do not follow the complaint CSV contract. Unreviewed generated labels use `label_source=synthetic`; labels confirmed by a human use `label_source=human`. Only human-labeled rows may enter the test set.
+The processed dataset has 300 rows: 170 human-labeled train/development examples, the 30-row synthetic pilot, and 100 human-labeled test examples. The synthetic pilot is for workflow checks and must not support performance claims. The test split has 24 emergency examples and is stored separately from train/development data.
 
-The current working table is `data/interim/complaints.csv`; it contains 71 rows: the 30-row synthetic pilot and 41 human-reviewed authored training/development examples. It contains no test data and is not suitable for performance evaluation.
-
-The remaining 229 proposed rows are stored separately: 21 in batch 003, 108 in batch 004, and 100 in `annotation-test-draft.csv`. All remain pending and are excluded from the working table. Confirm every proposed label before promotion. Test candidates require human label confirmation and must be frozen before model tuning the proposal file is not the frozen test set.
+`data/processed/test-manifest.json` records the frozen test checksum. Verify the manifest before evaluation and do not tune model choices or thresholds using test results. The annotation draft files preserve reviewed label decisions and authored source text.
 
 ## Split and readiness checks
 
 `validate_dataset_readiness` checks that provenance IDs match complaint IDs, that normalized exact duplicates do not cross splits, and reports possible cross-split text variants for manual review. Similarity candidates are review prompts, not automatic duplicate decisions. Human review is still needed for paraphrases, translations and transliterations that automated text matching cannot reliably identify.
 
-Use the checks together after loading both files:
+Use the readiness check from the project root:
 
-```python
-from civiclens.data import load_dataset, load_provenance, validate_dataset_readiness
-
-rows = load_dataset("data/interim/complaints.csv")
-sources = load_provenance("data/interim/provenance.csv")
-report = validate_dataset_readiness(rows, sources)
+```powershell
+python scripts/check_dataset.py
 ```
 
-For a compact report from the project root, run `python scripts/check_dataset.py`. Use `--complaints` and `--provenance` to check alternate files. Target shortfalls are shown in the report; they do not make a preparation dataset invalid.
+Use `--train-dev`, `--test`, and `--provenance` to check alternate files. The report includes split and label counts, emergency counts, target gaps, possible text variants, and frozen-test checksum verification.
 
-The TF-IDF baseline is in `src/civiclens/baseline.py`. Run `python scripts/train_baseline.py` to fit on train rows and report development metrics. The command excludes test rows from fitting and reporting. Confidence intervals on development metrics describe only the development sample; final test metrics must be generated after the test labels are reviewed and frozen.
+## Baseline
 
-The readiness report counts rows by split and measures progress toward 300 total examples, 100 human-labeled test examples and 20 emergency test examples. Target shortfalls are reported without rejecting the synthetic pilot. Keep the test set separate and frozen before model tuning - do not use the synthetic pilot for performance claims.
+The TF-IDF baseline is in `src/civiclens/baseline.py`. Run `python scripts/train_baseline.py` for development metrics and development-based emergency threshold selection. Run `python scripts/evaluate_baseline.py` to refit on train, verify the test checksum, and report metrics on the frozen test set. The test report is written to `reports/baseline-test-report.json`; test metrics are not used for further tuning.
